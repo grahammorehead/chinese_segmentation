@@ -23,7 +23,7 @@ To train an automatic word tokenizer for Chinese that goes beyond the 4-characte
 - For memory reasons, only iterative approaches were considered (mini-batches of 1000), so it can run on a two-year old Macbook
 
 ## MODEL DESIGN
-There are several components to the overall BiLSTM model, some of which were used only temporarily. 
+There are several components to the overall BiLSTM model, some of which are optional. 
 
 ### COMPONENTS
 - Splitter (in model.py) The Python object that manages the other layers and objects
