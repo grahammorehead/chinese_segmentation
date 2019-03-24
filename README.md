@@ -33,7 +33,7 @@ There are several components to the overall BiLSTM model, some of which are opti
 - LSTM (in stacked_lstm.py) My code for an LSTM cell
 - SplitLayer (in split_layer.py) A NN object designed to incorporate all proved signals and
 produce the final prediction
-- SkewedL1Loss (in gmutils/gmutils/pytorch_utils.py) A custom loss function
+- SkewedL1Loss (in gmutils/gmutils/pytorch_utils.py) A custom loss function (optional)
 
 ### OPERATION
 - Several threads run in parallel (limited by hardware)
