@@ -25,15 +25,17 @@ To train an automatic word tokenizer for Chinese that goes beyond the 4-characte
 ## MODEL DESIGN
 There are several components to the overall BiLSTM model, some of which were used only temporarily. 
 
-COMPONENTS
+### COMPONENTS
 - Splitter (in model.py) The Python object that manages the other layers and objects
 - BatchGraph (in model.py) The Python object that managed the tensor graph for a single batch of training data
-- StackedBiLSTM (in stacked_lstm.py) The NN object that manages the LSTMs and the SplitLayer
+- SimpleBiLSTM (in simple_lstm.py) The NN object that manages the LSTMs and the SplitLayer
+- StackedBiLSTM (in stacked_lstm.py) The NN object that manages the stacked LSTMs and the SplitLayer (optional)
 - LSTM (in stacked_lstm.py) My code for an LSTM cell
 - SplitLayer (in split_layer.py) A NN object designed to incorporate all proved signals and
 produce the final prediction
 - SkewedL1Loss (in gmutils/gmutils/pytorch_utils.py) A custom loss function
-OPERATION
+
+### OPERATION
 - Several threads run in parallel (limited by hardware)
 - Each thread trains on distinct parts of the data:
   - loads a previous model from disk based on validation loss
