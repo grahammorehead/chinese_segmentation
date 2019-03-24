@@ -23,13 +23,12 @@ To train an automatic word tokenizer for Chinese that goes beyond the 4-characte
 - For memory reasons, only iterative approaches were considered (mini-batches of 1000), so it can run on a two-year old Macbook
 
 ## MODEL DESIGN
-There are several components to the overall BiLSTM model, some of which were used only temporarily. See progress notes for details. Also see comments in the code. See README for installation instructions.
+There are several components to the overall BiLSTM model, some of which were used only temporarily. 
+
 COMPONENTS
 - Splitter (in model.py) The Python object that manages the other layers and objects
-- BatchGraph (in model.py) The Python object that managed the tensor graph for a
-single batch of training data
-- StackedBiLSTM (in stacked_lstm.py) The NN object that manages the LSTMs and the
-SplitLayer
+- BatchGraph (in model.py) The Python object that managed the tensor graph for a single batch of training data
+- StackedBiLSTM (in stacked_lstm.py) The NN object that manages the LSTMs and the SplitLayer
 - LSTM (in stacked_lstm.py) My code for an LSTM cell
 - SplitLayer (in split_layer.py) A NN object designed to incorporate all proved signals and
 produce the final prediction
