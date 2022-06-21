@@ -4,7 +4,7 @@ dill==0.2.8.2
 editdistance==0.5.2
 idna==2.8
 ijson==2.3
-numpy==1.15.4
+numpy==1.22.0
 pandas==0.23.4
 python-dateutil==2.7.5
 pytz==2018.7
